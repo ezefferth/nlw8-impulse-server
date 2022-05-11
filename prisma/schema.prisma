@@ -18,5 +18,6 @@ model Feedback {
 
 
 
-  @@map("feedbacks")//nome da tabela
+  @@map("feedbacks")
 }
+ 

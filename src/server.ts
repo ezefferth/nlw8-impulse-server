@@ -1,18 +1,20 @@
-
-
 import express from 'express';
+
+
+
+import { routes } from './routes';
+
+
 
 const app = express();
 
+
+
+//tem q vir antes, ordem sequencial
 app.use(express.json()); //para que seja entendido que a req vai vir em formato json
 
-app.post('/feedbacks', (req, res) => {
+app.use(routes)
 
-  console.log(req.body);
-
-  return res.send('Hello World');
-})
-
-app.listen(3333 , () => {
+app.listen(3333, () => {
   console.log('server running');
 })
